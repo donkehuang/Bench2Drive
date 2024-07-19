@@ -20,7 +20,7 @@ import numpy as np
 
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 
 
 class Visualizer(object):

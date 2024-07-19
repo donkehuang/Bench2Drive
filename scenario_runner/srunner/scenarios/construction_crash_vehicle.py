@@ -13,18 +13,18 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       ActorTransformSetter,
                                                                       SwitchWrongDirectionTest,
                                                                       ScenarioTimeout,
                                                                       Idle, WaitForever,
                                                                       OppositeActorFlow)
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
                                                                                WaitUntilInFrontPosition)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import (RemoveRoadLane,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import (RemoveRoadLane,
                                               ReAddRoadLane,
                                               SetMaxSpeed,
                                               ChangeOppositeBehavior)

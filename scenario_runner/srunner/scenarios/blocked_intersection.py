@@ -13,20 +13,20 @@ from __future__ import print_function
 
 import carla
 import py_trees
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       Idle,
                                                                       ScenarioTimeout,
                                                                       ActorTransformSetter,
                                                                       HandBrakeVehicle)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToVehicle
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToVehicle
 
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import HandleJunctionScenario
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import HandleJunctionScenario
 
-from srunner.tools.scenario_helper import generate_target_waypoint_in_route
+from scenario_runner.srunner.tools.scenario_helper import generate_target_waypoint_in_route
 
 
 def convert_dict_to_location(actor_dict):

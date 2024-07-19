@@ -15,8 +15,8 @@ import os
 import time
 
 import carla
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.timer import GameTime
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.timer import GameTime
 
 from leaderboard.envs.sensor_interface import CallBack, OpenDriveMapReader, SpeedometerReader, SensorConfigurationInvalid
 from leaderboard.autoagents.autonomous_agent import Track

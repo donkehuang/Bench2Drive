@@ -19,7 +19,7 @@ import carla
 import pexpect
 import transforms3d
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 
 from leaderboard.autoagents.autonomous_agent import AutonomousAgent, Track
 

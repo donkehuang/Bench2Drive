@@ -45,13 +45,13 @@ except ModuleNotFoundError:
 
 import carla
 
-from srunner.scenarioconfigs.openscenario_configuration import OpenScenarioConfiguration
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenario_manager import ScenarioManager
-from srunner.scenarios.open_scenario import OpenScenario
-from srunner.scenarios.route_scenario import RouteScenario
-from srunner.tools.scenario_parser import ScenarioConfigurationParser
-from srunner.tools.route_parser import RouteParser
+from scenario_runner.srunner.scenarioconfigs.openscenario_configuration import OpenScenarioConfiguration
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenario_manager import ScenarioManager
+from scenario_runner.srunner.scenarios.open_scenario import OpenScenario
+from scenario_runner.srunner.scenarios.route_scenario import RouteScenario
+from scenario_runner.srunner.tools.scenario_parser import ScenarioConfigurationParser
+from scenario_runner.srunner.tools.route_parser import RouteParser
 
 # Version of scenario_runner
 VERSION = '0.9.13'

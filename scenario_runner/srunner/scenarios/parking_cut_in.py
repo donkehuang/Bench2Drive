@@ -12,15 +12,15 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       BasicAgentBehavior)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
                                                                                InTimeToArrivalToLocation,
                                                                                DriveDistance)
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import LeaveSpaceInFront, ChangeRoadBehavior
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import LeaveSpaceInFront, ChangeRoadBehavior
 
 
 class ParkingCutIn(BasicScenario):

@@ -12,7 +12,7 @@ import os
 
 import carla
 
-from agents.navigation.global_route_planner import GlobalRoutePlanner
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.global_route_planner import GlobalRoutePlanner
 
 SCENARIO_TYPES = {
 

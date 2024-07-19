@@ -13,7 +13,7 @@ from lxml import etree
 from tabulate import tabulate
 
 import carla
-from agents.navigation.global_route_planner import GlobalRoutePlanner
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.global_route_planner import GlobalRoutePlanner
 
 MAPS_LOCATIONS = {
     "Town01": "Unreal/CarlaUE4/Content/Carla/Maps/OpenDrive/Town01.xodr",

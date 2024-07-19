@@ -16,13 +16,13 @@ import py_trees
 
 import carla
 
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (WaitForBlackboardVariable,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (WaitForBlackboardVariable,
                                                                                InTimeToArrivalToLocation)
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import WaitForever
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.timer import TimeOut
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import UpdateAllActorControls
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import Criterion
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import WaitForever
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.timer import TimeOut
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import UpdateAllActorControls
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import Criterion
 
 
 class BasicScenario(object):

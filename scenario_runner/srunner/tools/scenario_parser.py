@@ -15,8 +15,8 @@ import xml.etree.ElementTree as ET
 
 import carla
 
-from srunner.scenarioconfigs.scenario_configuration import ScenarioConfiguration, ActorConfigurationData
-from srunner.scenarioconfigs.route_scenario_configuration import RouteConfiguration
+from scenario_runner.srunner.scenarioconfigs.scenario_configuration import ScenarioConfiguration, ActorConfigurationData
+from scenario_runner.srunner.scenarioconfigs.route_scenario_configuration import RouteConfiguration
 
 
 class ScenarioConfigurationParser(object):

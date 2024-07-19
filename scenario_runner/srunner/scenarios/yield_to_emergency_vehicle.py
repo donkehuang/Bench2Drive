@@ -14,17 +14,17 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorTransformSetter,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorTransformSetter,
                                                                       ActorDestroy,
                                                                       Idle,
                                                                       AdaptiveConstantVelocityAgentBehavior)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, YieldToEmergencyVehicleTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToVehicle,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, YieldToEmergencyVehicleTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToVehicle,
                                                                                WaitUntilInFront,
                                                                                DriveDistance)
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import RemoveRoadLane, ReAddRoadLane
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import RemoveRoadLane, ReAddRoadLane
 
 
 class YieldToEmergencyVehicle(BasicScenario):

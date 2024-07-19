@@ -1,4 +1,4 @@
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 from leaderboard.envs.sensor_interface import SensorInterface, CallBack, OpenDriveMapReader, SpeedometerReader
 import cv2
 import json

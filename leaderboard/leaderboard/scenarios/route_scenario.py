@@ -21,14 +21,14 @@ import traceback
 import numpy as np
 
 import carla
-from agents.navigation.local_planner import RoadOption
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.local_planner import RoadOption
 
-from srunner.scenarioconfigs.scenario_configuration import ActorConfigurationData
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenarioconfigs.scenario_configuration import ActorConfigurationData
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import ScenarioTriggerer, Idle
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitForBlackboardVariable
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTest,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import ScenarioTriggerer, Idle
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitForBlackboardVariable
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTest,
                                                                      InRouteTest,
                                                                      RouteCompletionTest,
                                                                      OutsideRouteLanesTest,
@@ -37,11 +37,11 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTe
                                                                      ActorBlockedTest,
                                                                      MinimumSpeedRouteTest)
 
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.scenarios.background_activity import BackgroundBehavior
-from srunner.scenariomanager.weather_sim import RouteWeatherBehavior
-from srunner.scenariomanager.lights_sim import RouteLightsBehavior
-from srunner.scenariomanager.timer import RouteTimeoutBehavior
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.scenarios.background_activity import BackgroundBehavior
+from scenario_runner.srunner.scenariomanager.weather_sim import RouteWeatherBehavior
+from scenario_runner.srunner.scenariomanager.lights_sim import RouteLightsBehavior
+from scenario_runner.srunner.scenariomanager.timer import RouteTimeoutBehavior
 
 from leaderboard.utils.route_parser import RouteParser, DIST_THRESHOLD
 from leaderboard.utils.route_manipulation import interpolate_trajectory

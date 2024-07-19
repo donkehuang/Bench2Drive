@@ -405,5 +405,6 @@ if __name__ == '__main__':
     parser.add_argument('--map_path','-m', type=str)
 
     args = parser.parse_args()
-    map_path = f'./maps/Town{args.map_path}_HD_map.npz'
-    visualize_data(args.file_path, map_path, vis_bbox=True, vis_top_down=True, vis_road=True, vis_lidar_bev=True, vis_lidar_to_back_image=True, vis_lidar_to_front_image=True, vis_lidar_to_front_left_image=True)
+    # map_path = args.map_path
+    # map_path = f'./maps/Town{args.map_path}_HD_map.npz'
+    visualize_data(args.file_path, args.map_path, vis_bbox=True, vis_top_down=True, vis_road=True, vis_lidar_bev=True, vis_lidar_to_back_image=True, vis_lidar_to_front_image=True, vis_lidar_to_front_left_image=True)

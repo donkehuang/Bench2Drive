@@ -18,10 +18,10 @@ import xmlschema
 import carla
 
 # pylint: disable=line-too-long
-from srunner.scenarioconfigs.scenario_configuration import ActorConfigurationData, ScenarioConfiguration
+from scenario_runner.srunner.scenarioconfigs.scenario_configuration import ActorConfigurationData, ScenarioConfiguration
 # pylint: enable=line-too-long
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider  # workaround
-from srunner.tools.openscenario_parser import OpenScenarioParser, ParameterRef
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider  # workaround
+from scenario_runner.srunner.tools.openscenario_parser import OpenScenarioParser, ParameterRef
 
 
 class OpenScenarioConfiguration(ScenarioConfiguration):

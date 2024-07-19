@@ -10,9 +10,9 @@ This module provides the key configuration parameters for a route-based scenario
 """
 
 import carla
-from agents.navigation.local_planner import RoadOption
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.local_planner import RoadOption
 
-from srunner.scenarioconfigs.scenario_configuration import ScenarioConfiguration
+from scenario_runner.srunner.scenarioconfigs.scenario_configuration import ScenarioConfiguration
 
 
 class RouteConfiguration(object):

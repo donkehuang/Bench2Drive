@@ -11,19 +11,19 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from agents.navigation.local_planner import RoadOption
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.local_planner import RoadOption
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       BatchActorTransformSetter,
                                                                       CutIn,
                                                                       BasicAgentBehavior,
                                                                       Idle)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
                                                                                InTimeToArrivalToLocation)
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import RemoveRoadLane, LeaveSpaceInFront, ReAddRoadLane, ChangeRoadBehavior
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import RemoveRoadLane, LeaveSpaceInFront, ReAddRoadLane, ChangeRoadBehavior
 
 
 def get_value_parameter(config, name, p_type, default):

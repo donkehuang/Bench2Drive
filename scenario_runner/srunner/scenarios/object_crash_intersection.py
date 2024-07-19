@@ -15,23 +15,23 @@ import py_trees
 
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       HandBrakeVehicle,
                                                                       KeepVelocity,
                                                                       ActorTransformSetter,
                                                                       MovePedestrianWithEgo)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
                                                                                InTimeToArrivalToLocation,
                                                                                DriveDistance)
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.scenario_helper import (generate_target_waypoint,
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.scenario_helper import (generate_target_waypoint,
                                            generate_target_waypoint_in_route,
                                            get_same_dir_lanes,
                                            get_opposite_dir_lanes)
 
-from srunner.tools.background_manager import LeaveCrossingSpace
+from scenario_runner.srunner.tools.background_manager import LeaveCrossingSpace
 
 
 def get_sidewalk_transform(waypoint, offset):

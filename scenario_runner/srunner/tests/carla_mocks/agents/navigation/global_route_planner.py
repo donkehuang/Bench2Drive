@@ -13,8 +13,8 @@ import numpy as np
 import networkx as nx
 
 import carla
-from agents.navigation.local_planner import RoadOption
-from agents.tools.misc import vector
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.local_planner import RoadOption
+from scenario_runner.srunner.tests.carla_mocks.agents.tools.misc import vector
 
 class GlobalRoutePlanner(object):
     """
@@ -108,11 +108,15 @@ class GlobalRoutePlanner(object):
             endloc = wp2.transform.location
             if wp1.transform.location.distance(endloc) > self._sampling_resolution:
                 w = wp1.next(self._sampling_resolution)[0]
-                while w.transform.location.distance(endloc) > self._sampling_resolution:
+                index = 0
+                while w.transform.location.distance(endloc) > self._sampling_resolution and index < 5 :
+                    index = index + 1
                     seg_dict['path'].append(w)
-                    w = w.next(self._sampling_resolution)[0]
+                    if len(w.next(self._sampling_resolution)) != 0:
+                        w = w.next(self._sampling_resolution)[0]
             else:
-                seg_dict['path'].append(wp1.next(self._sampling_resolution)[0])
+                if len(wp1.next(self._sampling_resolution)) != 0:
+                    seg_dict['path'].append(wp1.next(self._sampling_resolution)[0])
             self._topology.append(seg_dict)
 
     def _build_graph(self):

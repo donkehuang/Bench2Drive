@@ -21,9 +21,9 @@ import operator
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.weather_sim import Weather
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (TrafficLightStateSetter,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.weather_sim import Weather
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (TrafficLightStateSetter,
                                                                       ActorTransformSetterToOSCPosition,
                                                                       RunScript,
                                                                       ChangeWeather,
@@ -40,7 +40,7 @@ from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (TrafficLig
                                                                       ChangeParameter)
 # pylint: disable=unused-import
 # For the following includes the pylint check is disabled, as these are accessed via globals()
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTest,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTest,
                                                                      MaxVelocityTest,
                                                                      DrivenDistanceTest,
                                                                      AverageVelocityTest,
@@ -56,7 +56,7 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTe
                                                                      OffRoadTest,
                                                                      EndofRoadTest)
 # pylint: enable=unused-import
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToVehicle,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToVehicle,
                                                                                InTriggerDistanceToOSCPosition,
                                                                                InTimeToArrivalToOSCPosition,
                                                                                InTimeToArrivalToVehicle,
@@ -69,9 +69,9 @@ from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (I
                                                                                TriggerVelocity,
                                                                                WaitForTrafficLightState,
                                                                                CheckParameter)
-from srunner.scenariomanager.timer import TimeOut, SimulationTimeCondition
-from srunner.tools.py_trees_port import oneshot_behavior
-from srunner.tools.scenario_helper import get_offset_transform, get_troad_from_transform
+from scenario_runner.srunner.scenariomanager.timer import TimeOut, SimulationTimeCondition
+from scenario_runner.srunner.tools.py_trees_port import oneshot_behavior
+from scenario_runner.srunner.tools.scenario_helper import get_offset_transform, get_troad_from_transform
 
 
 def oneshot_with_check(variable_name, behaviour, name=None):

@@ -19,9 +19,9 @@ import py_trees
 import carla
 import threading
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.timer import GameTime
-from srunner.scenariomanager.watchdog import Watchdog
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.timer import GameTime
+from scenario_runner.srunner.scenariomanager.watchdog import Watchdog
 
 from leaderboard.autoagents.agent_wrapper import AgentWrapperFactory, AgentError, TickRuntimeError
 from leaderboard.envs.sensor_interface import SensorReceivedNoData

@@ -12,9 +12,9 @@ This module provides some basic unit tests for the OpenSCENARIO feature of Scena
 from unittest import TestCase
 import glob
 import carla
-from srunner.scenarioconfigs.openscenario_configuration import OpenScenarioConfiguration
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenarios.open_scenario import OpenScenario
+from scenario_runner.srunner.scenarioconfigs.openscenario_configuration import OpenScenarioConfiguration
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenarios.open_scenario import OpenScenario
 
 
 class TestLoadingXOSC(TestCase):

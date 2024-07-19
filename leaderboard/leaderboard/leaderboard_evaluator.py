@@ -22,10 +22,9 @@ import pkg_resources
 import sys
 import carla
 import signal
-
-from srunner.scenariomanager.carla_data_provider import *
-from srunner.scenariomanager.timer import GameTime
-from srunner.scenariomanager.watchdog import Watchdog
+from scenario_runner.srunner.scenariomanager.carla_data_provider import *
+from scenario_runner.srunner.scenariomanager.timer import GameTime
+from scenario_runner.srunner.scenariomanager.watchdog import Watchdog
 
 from leaderboard.scenarios.scenario_manager import ScenarioManager
 from leaderboard.scenarios.route_scenario import RouteScenario
@@ -198,9 +197,12 @@ class LeaderboardEvaluator(object):
         """
         Prepares the simulation by getting the client, and setting up the world and traffic manager settings
         """
-        self.carla_path = os.environ["CARLA_ROOT"]
+        # self.carla_path = os.getenv("CARLA_ROOT", "/home/donke/carla")
+        self.carla_path = "/home/donke/carla"
         args.port = find_free_port(args.port)
-        cmd1 = f"{os.path.join(self.carla_path, 'CarlaUE4.sh')} -RenderOffScreen -nosound -carla-rpc-port={args.port} -graphicsadapter={args.gpu_rank}"
+        cmd1 = f"{os.path.join(self.carla_path, 'CarlaUE4.sh')} -nosound  -quality-level=Low -benchmark -fps=5 -windowed -Resx=600 -Resy=480 -prefernvidia -carla-rpc-port={args.port}"
+        # cmd1 = f"{os.path.join(self.carla_path, 'CarlaUE4.sh')} -nosound -prefernvidia -carla-rpc-port={args.port} -graphicsadapter={args.gpu_rank}"
+        # cmd1 = f"{os.path.join(self.carla_path, 'CarlaUE4.sh')} -RenderOffScreen -nosound -carla-rpc-port={args.port} -graphicsadapter={args.gpu_rank}"
         self.server = subprocess.Popen(cmd1, shell=True, preexec_fn=os.setsid)
         print(cmd1, self.server.returncode, flush=True)
         atexit.register(os.killpg, self.server.pid, signal.SIGKILL)
@@ -304,7 +306,7 @@ class LeaderboardEvaluator(object):
         )
 
     def _load_and_run_scenario(self, args, config):
-        """
+        """ 
         Load and run the scenario given by config.
 
         Depending on what code fails, the simulation will either stop the route and
@@ -331,8 +333,9 @@ class LeaderboardEvaluator(object):
         try:
             self._load_and_wait_for_world(args, config.town)
             self.route_scenario = RouteScenario(world=self.world, config=config, debug_mode=args.debug)
+            print("4")
             self.statistics_manager.set_scenario(self.route_scenario)
-
+        
         except Exception:
             # The scenario is wrong -> set the ejecution to crashed and stop
             print("\n\033[91mThe scenario could not be loaded:", flush=True)

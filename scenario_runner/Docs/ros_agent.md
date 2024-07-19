@@ -18,7 +18,7 @@ To enable your stack within challenge mode, the following steps need to be taken
 
 Derive from RosAgent and implement the sensors() method.
 
-    from srunner.autoagents.ros_agent import RosAgent
+    from scenario_runner.srunner.autoagents.ros_agent import RosAgent
 
     class MyRosAgent(RosAgent):
 

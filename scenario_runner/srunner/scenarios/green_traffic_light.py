@@ -13,10 +13,10 @@ import py_trees
 
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import TrafficLightFreezer
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitEndIntersection
-from srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import TrafficLightFreezer
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitEndIntersection
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
 
 
 class PriorityAtJunction(BasicScenario):

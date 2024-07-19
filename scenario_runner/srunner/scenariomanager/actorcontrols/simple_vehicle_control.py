@@ -19,10 +19,10 @@ import math
 
 import carla
 
-from srunner.scenariomanager.actorcontrols.basic_control import BasicControl
-from srunner.scenariomanager.actorcontrols.visualizer import Visualizer
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.timer import GameTime
+from scenario_runner.srunner.scenariomanager.actorcontrols.basic_control import BasicControl
+from scenario_runner.srunner.scenariomanager.actorcontrols.visualizer import Visualizer
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.timer import GameTime
 
 
 class SimpleVehicleControl(BasicControl):

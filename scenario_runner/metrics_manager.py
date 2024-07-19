@@ -25,7 +25,7 @@ import argparse
 from argparse import RawTextHelpFormatter
 
 import carla
-from srunner.metrics.tools.metrics_log import MetricsLog
+from scenario_runner.srunner.metrics.tools.metrics_log import MetricsLog
 
 
 class MetricsManager(object):

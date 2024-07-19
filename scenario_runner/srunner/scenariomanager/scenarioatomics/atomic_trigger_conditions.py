@@ -26,12 +26,12 @@ import math
 import py_trees
 import carla
 
-from agents.navigation.global_route_planner import GlobalRoutePlanner
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.global_route_planner import GlobalRoutePlanner
 
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import calculate_distance
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.timer import GameTime
-from srunner.tools.scenario_helper import get_distance_along_route, get_distance_between_actors
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import calculate_distance
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.timer import GameTime
+from scenario_runner.srunner.tools.scenario_helper import get_distance_along_route, get_distance_between_actors
 
 import srunner.tools as sr_tools
 

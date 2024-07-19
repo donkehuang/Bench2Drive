@@ -14,18 +14,18 @@ from numpy import random
 
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import ActorFlow, TrafficLightFreezer, ScenarioTimeout
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitEndIntersection, DriveDistance
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.scenario_helper import (generate_target_waypoint,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import ActorFlow, TrafficLightFreezer, ScenarioTimeout
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitEndIntersection, DriveDistance
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.scenario_helper import (generate_target_waypoint,
                                            get_junction_topology,
                                            filter_junction_wp_direction,
                                            get_same_dir_lanes,
                                            get_closest_traffic_light)
 
-from srunner.tools.background_manager import HandleJunctionScenario, ChangeOppositeBehavior
+from scenario_runner.srunner.tools.background_manager import HandleJunctionScenario, ChangeOppositeBehavior
 
 def get_value_parameter(config, name, p_type, default):
     if name in config.other_parameters:

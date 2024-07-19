@@ -15,22 +15,22 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       SwitchWrongDirectionTest,
                                                                       BasicAgentBehavior,
                                                                       ScenarioTimeout,
                                                                       Idle, WaitForever,
                                                                       HandBrakeVehicle,
                                                                       OppositeActorFlow)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (DriveDistance,
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (DriveDistance,
                                                                                InTriggerDistanceToLocation,
                                                                                InTriggerDistanceToVehicle,
                                                                                WaitUntilInFront,
                                                                                WaitUntilInFrontPosition)
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import LeaveSpaceInFront, SetMaxSpeed, ChangeOppositeBehavior, ChangeRoadBehavior
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import LeaveSpaceInFront, SetMaxSpeed, ChangeOppositeBehavior, ChangeRoadBehavior
 
 
 def get_value_parameter(config, name, p_type, default):

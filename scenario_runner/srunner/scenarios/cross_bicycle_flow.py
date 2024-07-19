@@ -14,14 +14,14 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import BicycleFlow, TrafficLightFreezer, ScenarioTimeout
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitEndIntersection
-from srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import BicycleFlow, TrafficLightFreezer, ScenarioTimeout
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitEndIntersection
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
 
-from srunner.tools.background_manager import HandleJunctionScenario
-from agents.navigation.local_planner import RoadOption
+from scenario_runner.srunner.tools.background_manager import HandleJunctionScenario
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.local_planner import RoadOption
 
 
 def convert_dict_to_location(actor_dict):

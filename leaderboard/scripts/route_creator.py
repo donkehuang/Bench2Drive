@@ -11,8 +11,8 @@ from lxml import etree
 import sys
 
 import carla
-from agents.navigation.global_route_planner import GlobalRoutePlanner
-from agents.navigation.local_planner import RoadOption
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.global_route_planner import GlobalRoutePlanner
+from scenario_runner.srunner.tests.carla_mocks.agents.navigation.local_planner import RoadOption
 
 LIFE_TIME = 10000
 

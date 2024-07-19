@@ -15,15 +15,15 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (InvadingActorFlow,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (InvadingActorFlow,
                                                                       ScenarioTimeout,
                                                                       ActorDestroy,
                                                                       BatchActorTransformSetter)
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitUntilInFrontPosition
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
-from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.background_manager import RemoveRoadLane, ChangeOppositeBehavior, ReAddRoadLane
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import WaitUntilInFrontPosition
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest, ScenarioTimeoutTest
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.tools.background_manager import RemoveRoadLane, ChangeOppositeBehavior, ReAddRoadLane
 
 
 def convert_dict_to_location(actor_dict):

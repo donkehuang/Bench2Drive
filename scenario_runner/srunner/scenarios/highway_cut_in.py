@@ -15,17 +15,17 @@ from __future__ import print_function
 import py_trees
 import carla
 
-from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
+from scenario_runner.srunner.scenariomanager.carla_data_provider import CarlaDataProvider
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorDestroy,
                                                                       ActorTransformSetter,
                                                                       SyncArrivalWithAgent,
                                                                       CutIn)
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
-from srunner.scenarios.basic_scenario import BasicScenario
+from scenario_runner.srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
+from scenario_runner.srunner.scenarios.basic_scenario import BasicScenario
 
-from srunner.tools.background_manager import HandleJunctionScenario
+from scenario_runner.srunner.tools.background_manager import HandleJunctionScenario
 
-from srunner.tools.scenario_helper import generate_target_waypoint
+from scenario_runner.srunner.tools.scenario_helper import generate_target_waypoint
 
 def convert_dict_to_location(actor_dict):
     """
